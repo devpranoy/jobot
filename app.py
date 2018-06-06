@@ -6,9 +6,9 @@ app = Flask(__name__)
 def index():
 	if request.method == "POST":
 		name=request.form['name']
-		email=request.form['email']
-		subject=request.form['subject']
-		message=request.form['message']
+		email=request.form['Email']
+		subject=request.form['Subject']
+		message=request.form['Message']
 		return "Yo, it's working! "+name+email+subject+message
 	else:
 		return "Yo it works!"
