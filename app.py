@@ -10,16 +10,16 @@ def index():
 		email=request.form['Email']
 		subject=request.form['Subject']
 		message=request.form['Message']
-		slackClient.chat.post_message("#general","boisss we have a customer")
-		slackClient.chat.post_message("#general","Name: "+name)
-		slackClient.chat.post_message("#general","Email: "+email)
-		slackClient.chat.post_message("#general","Subject: "+subject)
-		slackClient.chat.post_message("#general","Message: "+message)
+		slackClient.chat.post_message("#general","boisss we have a customer",as_user=True)
+		slackClient.chat.post_message("#general","Name: "+name,as_user=True)
+		slackClient.chat.post_message("#general","Email: "+email,as_user=True)
+		slackClient.chat.post_message("#general","Subject: "+subject,as_user=True)
+		slackClient.chat.post_message("#general","Message: "+message,as_user=True)
 		return "Yo, it's working! "
 	else:
 		
 		messageToChannel = "Hey Martin, Ren Says Hi"
-		slackClient.chat.post_message("#general",messageToChannel)
+		slackClient.chat.post_message("#general",messageToChannel,as_user=True)
 		return "Yo it works!123"
 
 if __name__ == "__main__":
