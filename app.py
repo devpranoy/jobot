@@ -17,9 +17,10 @@ def index():
 		slackClient.chat.post_message("#general","Message: "+message)
 		return "Yo, it's working! "
 	else:
-		return "Yo it works!123"
+		
 		messageToChannel = "Hey Martin, Ren Says Hi"
 		slackClient.chat.post_message("#general",messageToChannel)
+		return "Yo it works!123"
 
 if __name__ == "__main__":
 	app.run()
