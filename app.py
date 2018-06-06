@@ -10,7 +10,7 @@ def index():
 		subject=request.form['subject']
 		message=request.form['message']
 		return "Yo, it's working! "+name+email+subject+message
-	else
+	else:
 		return "Yo it works!"
 
 if __name__ == "__main__":
